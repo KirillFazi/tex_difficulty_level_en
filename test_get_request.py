@@ -3,7 +3,7 @@ import pandas as pd
 
 
 def make_get_request(subs):
-    url = f"http://localhost:8000/subtitles_level/?subs={subs}"
+    url = f"http://localhost:8000/subtitle_level/?subs={subs}"
     response = requests.get(url)
     return response.json()
 
