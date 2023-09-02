@@ -50,7 +50,7 @@ def predict_subtitles_level(list_seq: np.array, list_mask: np.array) -> tuple:
     }
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    weights = torch.load('../models/saved_weights.pt', map_location=device)
+    weights = torch.load('model/saved_weights.pt', map_location=device)
 
     model = BertArch(BERT).to(device)
 
@@ -65,10 +65,10 @@ def predict_subtitles_level(list_seq: np.array, list_mask: np.array) -> tuple:
 
     predictions = np.concatenate(predictions, axis=0)
 
-    subtitles_level = np.argmax(predictions, axis=1)
+    subtitle_level = np.argmax(predictions, axis=1)
     confidence = np.max(predictions, axis=1)
 
-    subtitles_level = int(subtitles_level.mean().round())
+    subtitle_level = int(subtitle_level.mean().round())
     confidence = np.mean(confidence)
 
-    return level_dict[subtitles_level], confidence
+    return level_dict[subtitle_level], confidence

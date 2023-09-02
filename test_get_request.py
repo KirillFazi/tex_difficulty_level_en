@@ -13,7 +13,7 @@ if __name__ == "__main__":
     print('Please, wait a few seconds...')
 
     df = pd.read_csv("data/movie_subs_level.csv")
-    subs = df['subs'][22]
+    subs = df['subs'][4]
 
     response_data = make_get_request(subs)
     print(response_data)
