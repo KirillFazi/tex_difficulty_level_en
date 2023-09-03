@@ -7,6 +7,9 @@ WORKDIR /app
 # Install Tesseract and other dependencies
 RUN pip install --upgrade pip
 
+# Copy the project files to the container
+COPY . /app
+
 # Install the project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 

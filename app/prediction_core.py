@@ -50,7 +50,7 @@ def predict_subtitles_level(list_seq: np.array, list_mask: np.array) -> tuple:
     }
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    weights = torch.load('model/saved_weights.pt', map_location=device)
+    weights = torch.load('app/model/saved_weights.pt', map_location=device)
 
     model = BertArch(BERT).to(device)
 

@@ -51,9 +51,9 @@ pip install -r requirements.txt
 ```bash
 python app/app.py
 ```
-The service will be accessible at `http://127.0.0.1:8000`.
+The service will be accessible at `http://0.0.0.0:8000/`.
 
-2. Open your web browser and make GET request to `http://localhost:8000/subtitle_level/?subs={<Your_subtitels_text_her>}`.
+2. Open your web browser and make GET request to `http://0.0.0.0:8000//subtitle_level/?subs={<Your_subtitels_text_her>}`.
 Subtitles text have to be less long than 45_000 symbols.
 
 3. You will get response looks like this - `{'subtitle_level': 'C1', 'confidence': 0.9517925977706909}`
@@ -72,7 +72,7 @@ git clone https://github.com/KirillFazi/jpn_eng_ocr_translator.git
 2. Build the Docker image:
 
 ```bash
-docker build -t ocr_translator .
+docker build -t subs_level .
 ```
 
 ## Usage (Docker)
@@ -83,7 +83,7 @@ docker build -t ocr_translator .
 docker run -d --name subs_level -p 8000:8000 subs_level
 ```
 
-2. Open your web browser and make GET request to `http://localhost:8000/subtitle_level/?subs={<Your_subtitels_text_her>}`.
+2. Open your web browser and make GET request to `http://0.0.0.0:8000//subtitle_level/?subs={<Your_subtitels_text_her>}`.
 Subtitles text have to be less long than 45_000 symbols.
 
 3. You will get response looks like this - `{'subtitle_level': 'C1', 'confidence': 0.9517925977706909}`
@@ -161,9 +161,9 @@ pip install -r requirements.txt
 ```bash
 python app/app.py
 ```
-Сервис будет доступен по адресу `http://127.0.0.1:8000`.
+Сервис будет доступен по адресу `http://0.0.0.0:8000/`.
 
-2. Откройте веб-браузер и сделайте GET-запрос по адресу `http://localhost:8000/subtitle_level/?subs={<Ваш_субтитры_текст_гер>}`.
+2. Откройте веб-браузер и сделайте GET-запрос по адресу `http://0.0.0.0:8000//subtitle_level/?subs={<Ваш_субтитры_текст_гер>}`.
 Длина текста субтитров не должна превышать 45_000 символов.
 
 3. Вы получите ответ следующего вида - `{'subtitle_level': 'C1', 'confidence': 0.9517925977706909}`
@@ -182,7 +182,7 @@ git clone https://github.com/KirillFazi/jpn_eng_ocr_translator.git
 2. Собрать образ Docker:
 
 ```bash
-docker build -t ocr_translator .
+docker build -t subs_level .
 ```
 
 ## Использование (Docker)
@@ -193,7 +193,7 @@ docker build -t ocr_translator .
 docker run -d --name subs_level -p 8000:8000 subs_level
 ```
 
-2. Откройте веб-браузер и сделайте GET-запрос по адресу `http://localhost:8000/subtitle_level/?subs={<Ваш_субтитры_текст_гер>}`.
+2. Откройте веб-браузер и сделайте GET-запрос по адресу `http://0.0.0.0:8000//subtitle_level/?subs={<Ваш_субтитры_текст_гер>}`.
 Текст субтитров должен быть не длиннее 45_000 символов.
 
 3. Вы получите ответ следующего вида - `{'subtitle_level': 'C1', 'confidence': 0.9517925977706909}`
