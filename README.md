@@ -58,7 +58,8 @@ Subtitles text have to be less long than 45_000 symbols.
 
 3. You will get response looks like this - `{'subtitle_level': 'C1', 'confidence': 0.9517925977706909}`
 
-*You can make GET request without browser. One way to do it, use `test_get_request.py` script in root dir of project*
+*You can make GET request without browser. One way to do it, use `test_get_request.py` script in root dir of project.*
+
 ------
 
 ## Setup and Installation (Docker)
