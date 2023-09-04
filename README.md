@@ -84,7 +84,7 @@ docker build -t subs_level .
 docker run -d --name subs_level -p 8000:8000 subs_level
 ```
 
-2. Open your web browser and make GET request to `http://0.0.0.0:8000//subtitle_level/?subs={<Your_subtitels_text_her>}`.
+2. Open your web browser and make GET request to `http://0.0.0.0:8000//subtitle_level/?subs={<Your_subtitels_text_here>}`.
 Subtitles text have to be less long than 45_000 symbols.
 
 3. You will get response looks like this - `{'subtitle_level': 'C1', 'confidence': 0.9517925977706909}`
@@ -164,7 +164,7 @@ python app/app.py
 ```
 Сервис будет доступен по адресу `http://0.0.0.0:8000/`.
 
-2. Откройте веб-браузер и сделайте GET-запрос по адресу `http://0.0.0.0:8000//subtitle_level/?subs={<Ваш_субтитры_текст_гер>}`.
+2. Откройте веб-браузер и сделайте GET-запрос по адресу `http://0.0.0.0:8000//subtitle_level/?subs={<Текст_субтитров_здесь>}`.
 Длина текста субтитров не должна превышать 45_000 символов.
 
 3. Вы получите ответ следующего вида - `{'subtitle_level': 'C1', 'confidence': 0.9517925977706909}`
