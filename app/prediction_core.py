@@ -1,6 +1,5 @@
 import numpy as np
 import torch
-import pickle
 
 from torch import nn
 

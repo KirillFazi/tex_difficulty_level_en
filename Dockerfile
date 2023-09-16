@@ -8,7 +8,8 @@ WORKDIR /app
 RUN pip install --upgrade pip
 
 # Copy the project files to the container
-COPY . /app
+COPY app/ /app
+COPY requirements.txt /app
 
 # Install the project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -17,4 +18,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8000
 
 # Define the command to run your application
-CMD ["python", "app/app.py"]
+CMD ["python", "app.py"]
