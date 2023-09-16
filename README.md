@@ -42,6 +42,11 @@ git clone https://github.com/KirillFazi/tex_difficulty_level_en.git
 pip install -r requirements.txt
 ```
 
+3. Download weights from GDrive - https://drive.google.com/drive/folders/1CvPIwBPBtJzJJPuNyvTOKjQpjvrFvrni?usp=sharing
+. File name - `saved_weights.pt`
+
+4. Move file `saved_weights.pt` to the folder `app/model/`
+
 *P.s. If you need to run it global, you have to change ip address and port.*
 
 ## Usage (Local)
@@ -70,7 +75,12 @@ Subtitles text have to be less long than 45_000 symbols.
 git clone https://github.com/KirillFazi/jpn_eng_ocr_translator.git
 ```
 
-2. Build the Docker image:
+2. Download weights from GDrive - https://drive.google.com/drive/folders/1CvPIwBPBtJzJJPuNyvTOKjQpjvrFvrni?usp=sharing
+. File name - `saved_weights.pt`
+
+3. Move file `saved_weights.pt` to the folder `app/model/`
+
+4. Build the Docker image:
 
 ```bash
 docker build -t subs_level .
@@ -153,6 +163,11 @@ git clone https://github.com/KirillFazi/tex_difficulty_level_en.git
 pip install -r requirements.txt
 ```
 
+3. Загрузите веса из GDrive - https://drive.google.com/drive/folders/1CvPIwBPBtJzJJPuNyvTOKjQpjvrFvrni?usp=sharing
+. Имя файла - `saved_weights.pt`.
+
+4. Переместите файл `saved_weights.pt` в папку `app/model/`.
+
 *P.s. Если необходимо запустить глобально, то необходимо изменить ip-адрес и порт.
 
 ## Использование (локально)
@@ -180,8 +195,12 @@ python app/app.py
 ```bash
 git clone https://github.com/KirillFazi/jpn_eng_ocr_translator.git
 ```
+2. Загрузите веса из GDrive - https://drive.google.com/drive/folders/1CvPIwBPBtJzJJPuNyvTOKjQpjvrFvrni?usp=sharing
+. Имя файла - `saved_weights.pt`.
 
-2. Собрать образ Docker:
+3. Переместите файл `saved_weights.pt` в папку `app/model/`.
+
+4. Собрать образ Docker:
 
 ```bash
 docker build -t subs_level .

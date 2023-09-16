@@ -16,7 +16,7 @@ async def get_subtitles_level(subs: str):
         subtitle_level, confidence = predict_subtitles_level(list_seq, list_mask)
         return {"subtitle_level": subtitle_level, "confidence": float(confidence)}
     except:
-        error_type = sys.exc_info()[0]
+        error_type = sys.exc_info()
         return {"error": "Error: " + str(error_type) + ". Please, check your input data."}
 
 
