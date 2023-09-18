@@ -14,12 +14,12 @@ async def get_subtitles_level(subs: str):
     try:
         list_seq, list_mask = data_preprocess(subs)
         subtitle_level, confidence = predict_subtitles_level(list_seq, list_mask)
-        return {"subtitle_level": subtitle_level, "confidence": float(confidence)}
+        return {'response_type': 200, "subtitle_level": subtitle_level, "confidence": float(confidence)}
+    except FileNotFoundError:
+        return {'response_type': 404, "error": "File not found", "error_message": f'{sys.exc_info()[1]}'}
     except:
-        error_type = sys.exc_info()
-        return {"error": "Error: " + str(error_type) + ". Please, check your input data."}
+        return {'response_type': 500, "error": "Internal server error", "error_message": f'{sys.exc_info()[1]}'}
 
 
 if __name__ == "__main__":
     uvicorn.run(app, host='0.0.0.0', port=8000)
-
