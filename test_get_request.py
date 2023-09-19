@@ -20,10 +20,11 @@ if __name__ == "__main__":
     #
     #     response_data = make_get_request(subs)
     #     print(response_data)
+
     print('Send request to the server')
     print('Please, wait a few seconds...')
 
-    subs = str(df['subs'][0])[:40_000]
+    subs = str(df['subs'][1])[:40_000]
 
     response_data = make_get_request(subs)
     print(response_data)
